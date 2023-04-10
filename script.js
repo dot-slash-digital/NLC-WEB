@@ -59,6 +59,10 @@ const faq = [
         question: "How long will therapy take for me?",
         answer: "We value an individualized approach, so each session is different yet guided toward your goals. We will discuss progress at each of our sessions but generally speaking, our approach is brief and solution-focused. In the words of Stephen Covey, we ‘begin with the end in mind,’ that being a better you --  mentally, physically, spiritually.",
     },
+    {
+        question: "How long will we spend together in session?",
+        answer: "Our first session will be approximately 90 minutes where we will gather an overview of your goals and what you’d hope to work on in therapy. We won’t go ’too deep here’ but only scratch the surface to gather the big picture. Please bring your client intake forms signed to this appointment and/or email back to us in advance at hello@nolimitscounseling.com. Beyond that, subsequent appointments will be 45-minutes in length. These can take place either in-person, or over zoom, or we can meet at varied locations within the community. It is our hope and intention that therapy can fit into your ‘daily day’ whether that means a quick lunch-break check-in, a walk in the park, a hike to clear the mind, or a favorite coffee shop. We are here to help, and meet you where you’re at.",
+    },
 ];
 
 

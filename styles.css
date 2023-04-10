@@ -249,10 +249,12 @@ body {
 .section.jumbotron .header {
     margin-bottom: 24px;
     filter: drop-shadow(0 0 16px #000);
+    text-align: center;
 }
 
 .section.jumbotron .subheader {
     filter: drop-shadow(0 0 16px #000);
+    text-align: center;
 }
 
 .section.jumbotron .button {
@@ -304,6 +306,7 @@ body {
 .section.intro .image {
     width: 400px;
     position: relative;
+    height: fit-content;
 }
 
 .section.intro .image::before {
@@ -425,6 +428,14 @@ body {
     display: flex;
     column-gap: 12px;
     align-items: center;
+}
+
+.section.services .unit .icon {
+    width: 32px;
+}
+
+.section.services .unit .icon img {
+    width: 100%;
 }
 
 .section.services .button {
@@ -594,7 +605,8 @@ body {
     padding-bottom: 24px;
     border-bottom: solid 2px var(--blue-200);
     user-select: none;
-    transition: 1s ease height;
+    transition: 0.75s ease height;
+    will-change: height;
     overflow: hidden;
     cursor: pointer;
     user-select: none;
@@ -654,7 +666,7 @@ body {
 
 .section.resources {
     background: url("images/resources_curve_top.png"), url("images/resources_curve_bottom.png"), url("images/resources_background_desert.jpg");
-    background-size: contain, contain, 100% auto;
+    background-size: contain, contain, cover;
     background-position: top, bottom, top;
     background-repeat: no-repeat;
 }
@@ -672,6 +684,13 @@ body {
     column-gap: 24px;
 }
 
+.section.resources .downloads .column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    box-sizing: border-box;
+}
+
 .section.resources .resource {
     display: flex;
     flex-direction: column;
@@ -683,8 +702,17 @@ body {
     min-width: 270px;
 }
 
-.section.resources .resource:nth-child(2) {
-    margin-top: 64px;
+.section.resources .resource ul {
+    margin-top: 0;
+    padding-left: 16px;
+}
+
+.section.resources .resource li:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.section.resources .column:nth-child(2) .resource:first-child {
+    margin-top: 80px;
 }
 
 .section.resources .title {
@@ -811,6 +839,62 @@ body {
     .section.quotesbar .links {
         column-gap: 40px;
     }
+
+    .section.navbar .links {
+        column-gap: 32px;
+    }
+
+    .section.intro .top,
+    .section.intro .bottom {
+        column-gap: 92px;
+    }
+
+    .section.intro .image {
+        width: 320px;
+    }
+
+    .section.services .content {
+        align-items: flex-start;
+        column-gap: 92px;
+    }
+
+    .section.services .image {
+        min-width: 320px;
+    }
+
+    .section.services .info {
+        max-width: 488px;
+    }
+
+    .section.services .grid {
+        grid-template-columns: auto auto auto;
+    }
+
+    .section.contact .content {
+        align-items: flex-start;
+        column-gap: 92px;
+    }
+
+    .section.contact .image {
+        max-width: 320px;
+    }
+
+    .section.faq .content {
+        align-items: flex-start;
+        column-gap: 92px;
+    }
+
+    .section.faq .header {
+        min-width: 408px;
+    }
+
+    .section.resources .content {
+        column-gap: 92px;
+    }
+
+    .section.resources .resource {
+        min-width: 200px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -822,7 +906,7 @@ body {
         position: fixed;
         height: 94px;
         overflow: hidden;
-        transition: 1s ease height;
+        transition: 0.75s ease height;
     }
 
     .section.navbar .content {
@@ -889,16 +973,291 @@ body {
         height: 372px;
     }
 
+    .section.jumbotron .content {
+        height: 100vh;
+
+    }
+
+    .section.jumbotron .logo {
+        width: 120px;
+    }
+
+    .f-header-1 {
+        font-size: 44px;
+        line-height: 50px;
+    }
+
+    .f-header-2 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .f-header-3 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .f-header-4 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .f-header-5 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .section.intro .top,
+    .section.intro .bottom {
+        column-gap: 64px;
+    }
+
+    .section.intro .image {
+        width: 240px;
+    }
+
+    .section.services .content {
+        align-items: flex-start;
+        column-gap: 64px;
+    }
+
+    .section.services .image {
+        min-width: 240px;
+    }
+
+    .section.services .info {
+        max-width: 396px;
+    }
+
+    .section.services .grid {
+        grid-template-columns: auto auto;
+        grid-column-gap: 24px;
+    }
+
+    .section.quotes .quote-group,
+    .section.quotes .quote {
+        width: 688px;
+        max-width: 688px;
+    }
+
+    .section.contact .content {
+        column-gap: 64px;
+    }
+
+    .section.contact .image {
+        max-width: 240px;
+    }
+
+    .section.faq .content {
+        align-items: flex-start;
+        column-gap: 64px;
+        padding: 320px 0px 120px 0px;
+    }
+
+    .section.faq .header {
+        min-width: 276px;
+    }
+
+    .section.resources {
+        background-size: contain, contain, cover;
+    }
+
+    .section.resources .content {
+        column-gap: 44px;
+    }
+
+    .section.resources .downloads {
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .section.resources .resource {
+        min-width: 200px;
+    }
+
+    .section.resources .downloads .column {
+        row-gap: 16px;
+    }
+
+    .section.resources .column:nth-child(2) .resource:first-child {
+        margin-top: 0;
+    }
+
+    .section.resources .info {
+        max-width: 200px;
+    }
+
 
 }
 
 @media (max-width: 768px) {
+    html {
+        scroll-padding-top: 62px;
+    }
+
     .container {
         max-width: 100%;
         padding: 0 16px;
     }
 
+    .f-header-1 {
+        font-size: 36px;
+        line-height: 42px;
+    }
+
+    .f-header-2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .f-header-3 {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .f-header-4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .f-header-5 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .section.jumbotron .logo {
+        width: 80px;
+        margin-bottom: 8px;
+    }
+
+    .section.jumbotron .subheader {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
     .section.navbar .logo {
         height: 32px;
+    }
+
+    .section.navbar {
+        height: 64px;
+    }
+
+    .section.navbar .button {
+        padding: 12px 16px;
+    }
+
+    .section.navbar .content {
+        padding: 16px 0;
+    }
+
+    .section.navbar .hamburger {
+        margin-top: 8px;
+        margin-bottom: 24px;
+    }
+
+    .section.navbar.open {
+        height: 352px;
+    }
+
+    .section.intro .content {
+        padding: 120px 0;
+    }
+
+    .section.intro .content .top {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .section.intro .content .top .signature {
+        width: 84px;
+    }
+
+    .section.intro .content .bottom {
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+
+    .section.intro .content .bottom .signature {
+        width: 104px;
+    }
+
+    .section.intro .content .info {
+        width: 100%;
+    }
+
+    .section.intro .content .image {
+        margin: 0 auto;
+    }
+
+    .section.services .content {
+        padding: 120px 0;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .section.services .grid {
+        grid-template-columns: min-content min-content;
+        grid-column-gap: 16px;
+    }
+
+    .section.services .unit .icon {
+        min-width: 20px;
+        width: 20px;
+    }
+
+    .section.quotes .content {
+        padding: 120px 0;
+    }
+
+    .section.quotes .content .quotation-mark {
+        width: 56px;
+        margin-bottom: 48px;
+    }
+
+    .section.quotes .quote-group,
+    .section.quotes .quote {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .section.contact .content {
+        padding: 120px 0;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .section.contact .image {
+        margin: 0 auto;
+    }
+
+    .section.faq .content {
+        padding-top: 120px;
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .section.resources .content {
+        padding: 120px 0;
+        flex-direction: column-reverse;
+        row-gap: 40px;
+    }
+
+    .section.resources .info {
+        max-width: 100%;
+    }
+
+    .section.resources .column {
+        width: 100%;
+    }
+
+    .section.footer .content {
+        flex-direction: column;
+        row-gap: 4px;
+    }
+
+    .section.footer .column {
+        align-items: center!important;
+        row-gap: 4px;
     }
 }
