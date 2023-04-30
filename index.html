@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
 
     <title>No Limits Counseling</title>
     <meta
@@ -272,17 +273,25 @@
                 Reach out to us if you have questions or are interested in
                 booking a session with our therapists.
               </div>
-              <form class="f-body-1">
-                <input type="text" name="name" placeholder="Name *" required />
+              <form
+                action="https://formspree.io/f/xgebpykb"
+                class="f-body-1"
+                method="POST"
+              >
+                <input type="text" name="Name" placeholder="Name *" required />
                 <input
                   type="email"
-                  name="email"
+                  name="_replyto"
                   placeholder="Email *"
                   required
                 />
-                <input type="tel" name="phone" placeholder="Phone Number" />
+                <input
+                  type="tel"
+                  name="Phone Number"
+                  placeholder="Phone Number"
+                />
                 <textarea
-                  name="message"
+                  name="Message"
                   placeholder="Message *"
                   required
                 ></textarea>
@@ -317,7 +326,11 @@
                     Please download and fill out the form below in preparation
                     for your first therapy session.
                   </div>
-                  <a class="button glowing" href="" target="_blank">
+                  <a
+                    class="button glowing"
+                    href="Client Intake Form.pdf"
+                    target="_blank"
+                  >
                     <div class="icon">
                       <img src="images/icon_download.svg" />
                     </div>
