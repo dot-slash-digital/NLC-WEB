@@ -372,8 +372,8 @@ body {
 /* SERVICES */
 
 .section.services {
-  background: url("images/section-curves/services_top.png"),
-    url("images/section-curves/services_bottom.png"),
+  background: url("images/section-curves/services-top.png"),
+    url("images/section-curves/services-bottom.png"),
     url("images/backgrounds/services.jpg");
   background-size: contain, contain, cover;
   background-position: top, bottom, bottom;
@@ -663,8 +663,8 @@ body {
 /* RESOURCES */
 
 .section.resources {
-  background: url("images/section-curves/resources_top.png"),
-    url("images/section-curves/resources_bottom.png"),
+  background: url("images/section-curves/resources-top.png"),
+    url("images/section-curves/resources-bottom.png"),
     url("images/backgrounds/resources.jpg");
   background-size: contain, contain, cover;
   background-position: top, bottom, top;
@@ -700,6 +700,11 @@ body {
   color: var(--white);
   align-items: flex-start;
   min-width: 270px;
+}
+
+.section.resources .resource a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .section.resources .resource ul {
@@ -772,9 +777,14 @@ body {
 .section.resources .qr-code {
   width: 160px;
   aspect-ratio: 1/1;
-  background-color: var(--green-600);
+  background-color: var(--white);
   padding: 10px;
   align-self: center;
+  border-radius: 8px;
+}
+
+.section.resources .qr-code img {
+  width: 100%;
 }
 
 /* FOOTER */
