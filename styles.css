@@ -201,7 +201,7 @@ body {
 
 .section.jumbotron {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-    url("images/plant_jumbotron_image.jpg");
+    url("images/backgrounds/jumbotron.jpg");
   background-size: cover, cover;
   background-position: bottom;
 }
@@ -372,9 +372,9 @@ body {
 /* SERVICES */
 
 .section.services {
-  background: url("images/services_curve_top.png"),
-    url("images/services_curve_bottom.png"),
-    url("images/another_mountain_background.jpg");
+  background: url("images/section-curves/services_top.png"),
+    url("images/section-curves/services_bottom.png"),
+    url("images/backgrounds/services.jpg");
   background-size: contain, contain, cover;
   background-position: top, bottom, bottom;
   background-repeat: no-repeat;
@@ -448,7 +448,7 @@ body {
 
 .section.quotes {
   background-color: var(--green-800);
-  background-image: url("images/quotes_curve_bottom.png");
+  background-image: url("images/section-curves/quotes-bottom.png");
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -580,7 +580,7 @@ body {
 /* FAQ */
 
 .section.faq {
-  background-image: url("images/faq_curve_top.png");
+  background-image: url("images/section-curves/faq-top.png");
   background-size: contain;
   background-position: top;
   background-repeat: no-repeat;
@@ -663,9 +663,9 @@ body {
 /* RESOURCES */
 
 .section.resources {
-  background: url("images/resources_curve_top.png"),
-    url("images/resources_curve_bottom.png"),
-    url("images/resources_background_desert.jpg");
+  background: url("images/section-curves/resources_top.png"),
+    url("images/section-curves/resources_bottom.png"),
+    url("images/backgrounds/resources.jpg");
   background-size: contain, contain, cover;
   background-position: top, bottom, top;
   background-repeat: no-repeat;
